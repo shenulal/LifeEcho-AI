@@ -38,7 +38,24 @@ def root():
 
 @app.get("/health")
 def health_check():
-    return {"status": "healthy", "app": settings.APP_NAME}
+    """Health check endpoint with database connectivity test"""
+    from database import SessionLocal
+
+    # Test database connection
+    db_status = "unknown"
+    try:
+        db = SessionLocal()
+        db.execute("SELECT 1")
+        db.close()
+        db_status = "connected"
+    except Exception as e:
+        db_status = f"error: {str(e)}"
+
+    return {
+        "status": "healthy",
+        "app": settings.APP_NAME,
+        "database": db_status
+    }
 
 
 if __name__ == "__main__":
