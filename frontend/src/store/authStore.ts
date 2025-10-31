@@ -27,8 +27,10 @@ export const useAuthStore = create<AuthState>((set) => ({
   login: async (email: string, password: string) => {
     try {
       const data = await authAPI.login(email, password);
-      localStorage.setItem('token', data.access_token);
-      
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('token', data.access_token);
+      }
+
       const user = await authAPI.getCurrentUser();
       set({ user, token: data.access_token, isAuthenticated: true });
     } catch (error) {
@@ -41,8 +43,10 @@ export const useAuthStore = create<AuthState>((set) => ({
       await authAPI.register(email, password, fullName);
       // Auto-login after registration
       const data = await authAPI.login(email, password);
-      localStorage.setItem('token', data.access_token);
-      
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('token', data.access_token);
+      }
+
       const user = await authAPI.getCurrentUser();
       set({ user, token: data.access_token, isAuthenticated: true });
     } catch (error) {
@@ -51,11 +55,19 @@ export const useAuthStore = create<AuthState>((set) => ({
   },
 
   logout: () => {
-    localStorage.removeItem('token');
+    if (typeof window !== 'undefined') {
+      localStorage.removeItem('token');
+    }
     set({ user: null, token: null, isAuthenticated: false });
   },
 
   checkAuth: async () => {
+    // Only run on client side
+    if (typeof window === 'undefined') {
+      set({ isLoading: false });
+      return;
+    }
+
     const token = localStorage.getItem('token');
     if (!token) {
       set({ isLoading: false });
