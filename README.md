@@ -19,54 +19,46 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
 
 ---
 
-## 🚀 Quick Deploy (100% FREE - No Credit Card Required!)
+## 🚀 Deploy in 15 Minutes (100% FREE)
 
-### 🆓 Free Deployment Options
+**No credit card. No payment. Just deploy.** 🎉
 
-**Option 1: Vercel + Railway** ⭐ RECOMMENDED
-- **Cost**: $0/month (Railway gives $5 free credit)
-- **Time**: 20 minutes
-- **No credit card required**
+### � Three Simple Steps
 
-**Option 2: Local + ngrok** (For quick testing)
-- **Cost**: $0/month
-- **Time**: 5 minutes
-- **Perfect for demos**
+1. **Push to GitHub** (2 min)
+2. **Deploy to Railway** (8 min) - Backend + Database
+3. **Deploy to Vercel** (5 min) - Frontend
 
-📖 **Complete Guide**: See [FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md)
+**Total Cost**: $0/month | **Total Time**: 15 minutes
 
 ---
 
-### Quick Start - Vercel + Railway
+### 📖 Deployment Guides
 
-**Step 1: Deploy Backend to Railway**
+Choose your preferred method:
+
+- **[DEPLOY_NOW.md](./DEPLOY_NOW.md)** ⭐ **START HERE** - Simple 15-minute guide
+- **[RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)** - Detailed Railway guide with troubleshooting
+- **[FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md)** - All free deployment options
+
+---
+
+### ⚡ Quick Deploy (CLI)
+
 ```bash
-# Install Railway CLI
-npm install -g @railway/cli
-
-# Run deployment script
-chmod +x deploy-railway.sh
+# Deploy backend to Railway
 ./deploy-railway.sh  # Linux/Mac
 deploy-railway.bat   # Windows
-```
 
-**Step 2: Deploy Frontend to Vercel**
-```bash
-# Install Vercel CLI
-npm install -g vercel
-
-# Run deployment script
-chmod +x deploy-vercel.sh
+# Deploy frontend to Vercel
 ./deploy-vercel.sh  # Linux/Mac
 deploy-vercel.bat   # Windows
 ```
 
-**Done!** Your app is live at:
+**Done!** Your app is live:
 - Frontend: `https://your-app.vercel.app`
 - Backend: `https://your-app.up.railway.app`
 - API Docs: `https://your-app.up.railway.app/docs`
-
-📖 **Detailed Instructions**: See [FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md)
 
 ---
 

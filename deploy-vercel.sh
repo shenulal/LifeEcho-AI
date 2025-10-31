@@ -22,14 +22,20 @@ echo ""
 echo "📁 Deploying frontend to Vercel..."
 cd frontend
 
-# Set environment variable
-vercel env add NEXT_PUBLIC_API_URL production <<< "$BACKEND_URL"
+# Create .env.production file
+echo "NEXT_PUBLIC_API_URL=$BACKEND_URL" > .env.production
 
-# Deploy to production
-vercel --prod
+echo ""
+echo "🚀 Deploying to production..."
+# Deploy to production with environment variable
+vercel --prod -e NEXT_PUBLIC_API_URL="$BACKEND_URL"
 
 echo ""
 echo "✅ Frontend deployed successfully!"
+echo ""
+echo "📝 Your deployment URL:"
+vercel ls | head -1
+
 echo ""
 echo "📝 Next steps:"
 echo "   1. Copy your Vercel URL from above"
