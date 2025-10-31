@@ -6,7 +6,7 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
 
 ---
 
-## Ìºü Features
+## ÔøΩÔøΩÔøΩ Features
 
 - ‚úÖ **User Authentication** - Secure JWT-based registration and login
 - ‚úÖ **Decision Management** - Create, view, update, and delete decisions
@@ -19,7 +19,7 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
 
 ---
 
-## Ì∫Ä Quick Deploy to Render (15 minutes)
+## ÔøΩÔøΩÔøΩ Quick Deploy to Render (15 minutes)
 
 ### Prerequisites
 - GitHub account
@@ -33,7 +33,7 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
    git init
    git add .
    git commit -m "LifeEcho AI MVP"
-   git remote add origin https://github.com/YOUR_USERNAME/LifeEcho-AI.git
+   git remote add origin https://github.com/shenulal/LifeEcho-AI.git
    git push -u origin main
    ```
 
@@ -52,11 +52,11 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
    - Frontend: `https://lifeecho-frontend.onrender.com`
    - API Docs: `https://lifeecho-api.onrender.com/docs`
 
-Ì≥ñ **Detailed Instructions**: See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+ÔøΩÔøΩÔøΩ **Detailed Instructions**: See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
 
 ---
 
-## Ì≤ª Local Development
+## ÔøΩÔøΩÔøΩ Local Development
 
 ### Quick Setup
 
@@ -87,7 +87,7 @@ npm run dev
 
 ---
 
-## ÌøóÔ∏è Tech Stack
+## ÔøΩÔøΩÔøΩÔ∏è Tech Stack
 
 **Backend**: FastAPI, PostgreSQL, SQLAlchemy, OpenAI GPT-4, JWT
 **Frontend**: Next.js 14, TypeScript, TailwindCSS, Recharts, Zustand
@@ -95,7 +95,7 @@ npm run dev
 
 ---
 
-## Ì≥ö Documentation
+## ÔøΩÔøΩÔøΩ Documentation
 
 - **[DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)** - Complete deployment instructions
 - **[TESTING_GUIDE.md](./TESTING_GUIDE.md)** - Testing procedures
@@ -106,14 +106,14 @@ npm run dev
 
 ---
 
-## Ì≤∞ Cost Estimate
+## ÔøΩÔøΩÔøΩ Cost Estimate
 
 **Free Tier**: ~$1-5/month (Render free + OpenAI API)
 **Production**: ~$31-71/month (Render $21 + OpenAI $10-50)
 
 ---
 
-## ÌæØ Quick Demo
+## ÔøΩÔøΩÔøΩ Quick Demo
 
 1. Create account
 2. Create decision: "Switch from Finance to Software Engineering"
@@ -124,4 +124,4 @@ npm run dev
 
 **Built with ‚ù§Ô∏è for LifeEcho AI**
 
-Ready to visualize your future? [Get Started](#-quick-deploy-to-render-15-minutes) Ì∫Ä
+Ready to visualize your future? [Get Started](#-quick-deploy-to-render-15-minutes) ÔøΩÔøΩÔøΩ
