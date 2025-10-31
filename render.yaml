@@ -1,8 +1,16 @@
+# NOTE: Render.com now requires payment information even for free tier
+# Use the alternative free deployment options below instead:
+# - Railway.app (Free tier available)
+# - Vercel (Frontend) + Railway (Backend + DB)
+# - Netlify (Frontend) + Railway (Backend + DB)
+# See FREE_DEPLOYMENT_GUIDE.md for detailed instructions
+
 services:
-  # Backend API Service
+  # Backend API Service (Free tier - spins down after 15 min inactivity)
   - type: web
     name: lifeecho-api
     env: python
+    plan: free  # Explicitly use free tier
     region: oregon
     buildCommand: "cd backend && pip install -r requirements.txt"
     startCommand: "cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT"
@@ -28,10 +36,11 @@ services:
       - key: CORS_ORIGINS
         sync: false  # Set this to your frontend URL
 
-  # Frontend Service
+  # Frontend Service (Free tier - spins down after 15 min inactivity)
   - type: web
     name: lifeecho-frontend
     env: node
+    plan: free  # Explicitly use free tier
     region: oregon
     buildCommand: "cd frontend && npm install && npm run build"
     startCommand: "cd frontend && npm start"
@@ -43,5 +52,6 @@ databases:
   - name: lifeecho-db
     databaseName: lifeecho
     user: lifeecho
+    plan: free  # Explicitly use free tier (90 days free)
     region: oregon
 

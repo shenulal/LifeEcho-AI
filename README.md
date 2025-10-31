@@ -19,40 +19,54 @@ A fully functional MVP of LifeEcho AI - an AI-powered predictive decision compan
 
 ---
 
-## ��� Quick Deploy to Render (15 minutes)
+## 🚀 Quick Deploy (100% FREE - No Credit Card Required!)
 
-### Prerequisites
-- GitHub account
-- Render account (free tier works)
-- OpenAI API key ([get one here](https://platform.openai.com/api-keys))
+### 🆓 Free Deployment Options
 
-### Steps
+**Option 1: Vercel + Railway** ⭐ RECOMMENDED
+- **Cost**: $0/month (Railway gives $5 free credit)
+- **Time**: 20 minutes
+- **No credit card required**
 
-1. **Push to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "LifeEcho AI MVP"
-   git remote add origin https://github.com/shenulal/LifeEcho-AI.git
-   git push -u origin main
-   ```
+**Option 2: Local + ngrok** (For quick testing)
+- **Cost**: $0/month
+- **Time**: 5 minutes
+- **Perfect for demos**
 
-2. **Deploy on Render**:
-   - Go to [render.com](https://render.com)
-   - Click "New +" → "Blueprint"
-   - Connect your GitHub repository
-   - Render will auto-detect `render.yaml`
+📖 **Complete Guide**: See [FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md)
 
-3. **Configure Environment Variables**:
-   
-   **Backend**: `OPENAI_API_KEY`, `CORS_ORIGINS`
-   **Frontend**: `NEXT_PUBLIC_API_URL`
+---
 
-4. **Access Your App**:
-   - Frontend: `https://lifeecho-frontend.onrender.com`
-   - API Docs: `https://lifeecho-api.onrender.com/docs`
+### Quick Start - Vercel + Railway
 
-��� **Detailed Instructions**: See [DEPLOYMENT_GUIDE.md](./DEPLOYMENT_GUIDE.md)
+**Step 1: Deploy Backend to Railway**
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Run deployment script
+chmod +x deploy-railway.sh
+./deploy-railway.sh  # Linux/Mac
+deploy-railway.bat   # Windows
+```
+
+**Step 2: Deploy Frontend to Vercel**
+```bash
+# Install Vercel CLI
+npm install -g vercel
+
+# Run deployment script
+chmod +x deploy-vercel.sh
+./deploy-vercel.sh  # Linux/Mac
+deploy-vercel.bat   # Windows
+```
+
+**Done!** Your app is live at:
+- Frontend: `https://your-app.vercel.app`
+- Backend: `https://your-app.up.railway.app`
+- API Docs: `https://your-app.up.railway.app/docs`
+
+📖 **Detailed Instructions**: See [FREE_DEPLOYMENT_GUIDE.md](./FREE_DEPLOYMENT_GUIDE.md)
 
 ---
 
