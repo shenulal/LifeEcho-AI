@@ -219,12 +219,23 @@ cd frontend
 vercel --prod
 ```
 
+### "Module not found: Can't resolve '@/lib/api'"
+
+**Cause**: TypeScript path aliases not configured correctly.
+
+**Fix**: Make sure these files exist in `frontend/`:
+- `tsconfig.json` with `"baseUrl": "."` and `"paths": { "@/*": ["./src/*"] }`
+- `jsconfig.json` (optional but helpful)
+
+**Already fixed in the repo!** Just redeploy.
+
 ### Build fails on Vercel
 
 **Fix**: Make sure:
 - Root Directory is set to `frontend` ⚠️ **CRITICAL**
 - `NEXT_PUBLIC_API_URL` is set correctly
 - You're deploying from the `frontend` directory if using CLI
+- `tsconfig.json` has `baseUrl` set
 
 ---
 
